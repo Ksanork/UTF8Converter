@@ -3,6 +3,8 @@ html(lang='en')
     head
         title UTF8Converter
 
+        link(href='../css/main.css', rel='stylesheet')
+
         script.
             if (typeof module === 'object') {window.module = module; module = undefined;}
 
@@ -13,6 +15,9 @@ html(lang='en')
             if (window.module) module = window.module;
 
     body
-        form
-            input(type='file')
-            input(id='test', type='button', value='Click')
+        main.center
+            h1 UTF8Converter
+                form(enctype="multipart/form-data")
+                    input(id="uploadFile", name='textFile', type='file')
+                    br
+                    input(id='submitBtn', type='button', value='Przetwarzaj')

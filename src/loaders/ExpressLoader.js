@@ -1,13 +1,19 @@
 let express = require('express');
 
 export default class ExpressLoader {
-    constructor(routes) {
+    constructor(routesMap) {
         this.app = express();
-        this.routes = routes;
+        this.routesMap = routesMap;
     }
 
     initUses() {
-        this.app.use("/", this.routes);
+        this.initRoutes();
+    }
+
+    initRoutes() {
+        this.routesMap.forEach((router, path) => {
+            this.app.use(path, router);
+        });
     }
 
     load() {

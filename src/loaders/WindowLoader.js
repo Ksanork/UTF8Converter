@@ -4,16 +4,20 @@ export default class WindowLoader {
     load() {
         console.log("load WindowLoader");
 
+        let win = this.getNewWindow(500, 300);
+        win.loadFile(global.config.paths.mainPage);
+        win.webContents.openDevTools();
+    }
+
+    getNewWindow(width, height) {
         let win = new BrowserWindow({
-            width: 800,
-            height: 600,
+            width: width,
+            height: height,
             webPreferences: {
                 nodeIntegration: true
             }
         });
 
-        // and load the index.html of the app.
-        win.loadFile(global.config.paths.mainPage);
-        win.webContents.openDevTools();
+        return win;
     }
 }
