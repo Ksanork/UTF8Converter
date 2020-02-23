@@ -1,0 +1,18 @@
+doctype html  
+html(lang='en')
+    head
+        title UTF8Converter
+
+        script.
+            if (typeof module === 'object') {window.module = module; module = undefined;}
+
+        script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+        script(src='../js/main.js')
+
+        script.
+            if (window.module) module = window.module;
+
+    body
+        form
+            input(type='file')
+            input(id='test', type='button', value='Click')
