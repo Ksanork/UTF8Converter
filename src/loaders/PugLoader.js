@@ -1,8 +1,9 @@
 const setupPug = require('electron-pug');
+import DebugLog from "../utils/DebugLog";
 
 export default class PugLoader {
     load() {
-        console.log("load PugLoader");
+        DebugLog.log("load PugLoader");
 
         try {
             let pug =  setupPug({pretty: true});

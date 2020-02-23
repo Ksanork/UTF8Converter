@@ -1,0 +1,9 @@
+{
+  "main": {
+    "debugMode":  true,
+    "windowWidth": 500,
+    "windowHeight": 300,
+    "debugWindowWidth": 1100,
+    "debugWindowHeight": 600
+  }
+}

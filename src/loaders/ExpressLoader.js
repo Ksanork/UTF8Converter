@@ -1,4 +1,5 @@
 let express = require('express');
+import DebugLog from "../utils/DebugLog";
 
 export default class ExpressLoader {
     constructor(routesMap) {
@@ -17,11 +18,11 @@ export default class ExpressLoader {
     }
 
     load() {
-        console.log("load ExpressLoader");
+        DebugLog.log("load ExpressLoader");
 
         this.initUses();
         this.app.listen(3000, () => {
-            console.log('Express server listening on port ');
+            DebugLog.log('Express server listening on port ');
         });
     }
 }

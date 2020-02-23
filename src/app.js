@@ -1,15 +1,11 @@
 const { app } = require('electron');
 
-import routes from './api/routes/routes';
-
 import ConfigLoader from './loaders/ConfigLoader';
 import PugLoader from './loaders/PugLoader';
 import WindowLoader from './loaders/WindowLoader';
 import ExpressLoader from './loaders/ExpressLoader';
 
-let routesMap = new Map([
-    ['/', routes]
-]);
+import routesMap from './api/routesMap';
 
 let loaders = [
     new ConfigLoader(),

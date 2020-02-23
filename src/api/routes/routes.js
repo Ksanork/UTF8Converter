@@ -1,12 +1,14 @@
 let express = require('express');
 
 import UploadService from "../../services/UploadService"
+import DebugLog from "../../utils/DebugLog";
 
 const router = express.Router();
-let uploadService = new UploadService();
 
 router.post('/upload', (req, res) => {
-    console.log("upload")
+    DebugLog.log("/upload");
+    let uploadService = new UploadService();
+
     uploadService.uploadFile(req, res);
 });
 

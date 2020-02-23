@@ -1,0 +1,8 @@
+{
+  "web": {
+    "paths": {
+      "pages": "public/pages/",
+      "mainPage": "public/pages/index.pug"
+    }
+  }
+}

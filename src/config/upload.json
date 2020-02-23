@@ -1,0 +1,10 @@
+{
+  "upload": {
+    "paths": {
+      "upload_dir": "./uploads"
+    },
+    "view": {
+      "fieldName": "textFile"
+    }
+  }
+}
